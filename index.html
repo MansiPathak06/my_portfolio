@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mansi- Developer Portfolio</title>
+    <link rel="stylesheet" href="mystyle.css" />
+    
+</head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Mansi's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Skills</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          <h4>Hello, My name is</h4>
+          <span class="green"> Mansi Pathak.</span>
+
+          <h4>and I am a passionate</h4>
+
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="img.jpeg" />
+        </div>
+      </section>
+      <hr />
+      <!-- About  -->
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="about.jpg">
+            </div>
+            <div class="about-col-2">
+              <h1 class="subtitle1">About Me</h1>
+              <p>A dedicated, motivated and hardworking fresher, highly motivated professional eager to learn new things and skills to enhance my performance. Operates well in both individual and team capacities. Quick learner and willing to make immediate contribution in dynamic team environments.</p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                
+              </div> 
+              <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                  <li><span>Front-End Development</span><br>HTML, CSS and Javscript</li>
+                  <li><span>MySQL</span><br>Good knowledge about SQL database.</li>
+                  <li><span>Core Java</span><br>Java with DSA</li>
+                  <li><span>Python</span><br>numpy,pandas etc.</li>
+
+                </ul>
+              </div>
+              <div class="tab-contents" id="Experience">
+                <ul>
+                  <li><span>I'm a fresher right now.</span><br></li>
+                  <li><span></span><br></li>
+                  
+                </ul>
+              </div>
+              <div class="tab-contents" id="Education">
+                <ul>
+                  <li><span>2022</span><br>Passed 12th</li>
+                  <li><span>2020</span><br>Passed 10th</li>
+                  <li><span>2022-2026</span><br>Pursuing Btech in Computer Science and Engineering</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <hr>
+  <!-- Skills -->
+  <div id="Skills">
+    <div class="container1">
+
+      <h1 class="heading">My skills</h1>
+        <div class="skill-list">
+          <div class="Tskills">
+            <h2 class="green1">Technical skills</h2>
+            <ul>
+              <li>Java Programming with DSA</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+          
+          </div>
+          <div class="Oskills">
+            <h2 class="green2">Other skills</h2>
+            <li>Public Speaking</li>
+            <li>Debates and speech</li>
+            <li>Presentation Skills</li>
+            <li>Art</li>
+            <li>Critical  Thinking</li>
+            
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr/>
+<!-- ---------projects------------- -->
+<div id="projects">
+  <div class="container2">
+    <h1 class="heading">My Work</h1>
+    <div class="content">Will  be displayed here soon..............</div>
+  </div>
+ </div>
+<hr />
+<!-- -------------Contact----------- -->
+<div id="contact">
+  <div class="container3">
+      <div class="row">
+        <div class="contact-left">
+            <h1 class="subtitle2">Contact Me</h1>
+            <p>pathakmansi608@gmail.com</p>
+            <p>9410225039</p>
+            <div class="social-icons">
+                <a href="https://facebook.com//"><i class="fa-brands fa-facebook"></i></a>
+                <a href=" "><i class="fa-brands fa-instagram"></i></a>
+                <a href=" "><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="contact-right"></div>
+    </div>
+  </div>
+</div>
+</main>
+    <script src="https://kit.fontawesome.com/5b1ee84be6.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["frontend developer."],
+        typeSpeed: 50,
+      });
+    </script>
+    <script>
+      var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents"); 
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){ 
+      tabcontent.classList.remove("active-tab")
+  }
+  event.currentTarget.classList.add("active-link")
+  document.getElementById(tabname).classList.add("active-tab")
+  }
+    </script>
+     
+  </body>
+</html>
